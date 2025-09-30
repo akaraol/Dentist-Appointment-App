@@ -1,0 +1,49 @@
+﻿@{
+}
+
+
+}
+
+
+
+
+
+@section Scripts{
+}
+
+
+@* <style>
+    .myBox {
+        background-color : dodgerblue;
+        transition : all .3s ease;
+        padding: 3rem;
+        color: white;
+    }
+
+    .myBox.active {
+            background-color: palegreen;
+            color:dodgerblue;
+        }
+
+</style>
+
+<h4 id="output">0</h4>
+<button class="increase-btn">Button 1</button>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<div class="myBox">
+    Saçmalama ayten 
+</div>
+@section Scripts {
+    <script>
+        $(()=> {
+                var counter = 0;
+                $('.increase-btn').on('click', (e)=> {
+                     $('#output').text(++counter);
+                     $('.myBox').removeClass('active').addClass(counter%2!=0 ? 'active': '');
+                });
+        });
+    </script> *@
